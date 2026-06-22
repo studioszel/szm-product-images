@@ -1,0 +1,7 @@
+# Temporary working directories
+_unzip/
+_work/
+*.tmp
+
+# Source archives must never be committed
+*.zip
