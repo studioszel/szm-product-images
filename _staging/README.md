@@ -6,7 +6,7 @@ NOT in `images/`, because their final folder name is not yet decided.
 ## Why they are not in images/
 
 The store convention is `images/<SLUG>/main.jpg`, where SLUG derives from the `Image_File` value
-in `eva/knowledge-base/visual-catalogue.csv` (drop `.jpg`, uppercase, space and `+` become `-`).
+in `03-eva-files/knowledge-base/visual-catalogue.csv` (drop `.jpg`, uppercase, space and `+` become `-`).
 All 373 codes staged here have a BLANK `Image_File`, so no SLUG exists for them yet.
 
 The SLUG cannot be inferred from the product Code. Measured against the 517 catalogue rows that
@@ -45,3 +45,19 @@ Pages URLs are left untouched and correct.
   absent products; the rest are top-material variants (`-TOP Z`, `-TOP OAK`, `GAL`) or standalone
   `SUP` upper units that the webshop does not sell separately and that most likely just need an
   `Image_File` pointing at the base product's photo. See `target-list.csv`.
+
+## Coverage after this run
+
+| Measure | Rows |
+| --- | --- |
+| Catalogue product rows (duplicated header row excluded) | 1094 |
+| Served by a live `images/<SLUG>/` folder | 517 |
+| Served by a photo staged here by Code | 373 |
+| **Photo coverage total** | **890** |
+| Still with no photo | 204 |
+
+The 204 are 202 codes with no matching reference on studioszel.ro plus `PS714` and
+`OPS232BAS/SUP`, whose pages 404. Full list in `unmatched-codes.txt`.
+
+Note: paths to `visual-catalogue.csv` in this file follow the `szm-ia-agents` restructure of
+2026-09-08, in which `eva/` became `03-eva-files/`.
